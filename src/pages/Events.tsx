@@ -143,10 +143,10 @@ const StayTunedMessage: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5 }}
-      className="glass-panel p-8 text-center"
+      className="glass-panel p-8 text-center bg-gradient-to-r from-blue-500/20 to-cyan-400/20"
     >
-      <h3 className="text-2xl font-semibold mb-4">STAY TUNED FOR 2025 Semester 2</h3>
-      <p className="text-gray-400">We're preparing exciting events for the upcoming semester. Check back soon for updates!</p>
+      <h3 className="text-3xl font-bold mb-4 text-blue-400">STAY TUNED FOR 2025 Semester 2</h3>
+      <p className="text-xl text-gray-300">We're preparing exciting events for the upcoming semester. Check back soon for updates!</p>
     </motion.div>
   );
 };
