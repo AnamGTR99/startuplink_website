@@ -165,13 +165,13 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ImageSection
-              image="/src/assets/test1.jpg"
+              image="/assets/test1.jpg"
               title="Startup Fair 2024"
               description="Students networking and sharing ideas at our recent startup fair, fostering connections within the entrepreneurial community."
               index={0}
             />
             <ImageSection
-              image="/src/assets/test2.JPEG"
+              image="/assets/test2.JPEG"
               title="Spicy Startup Trivia"
               description="Testing our members knowledge of startup with a twist, Buldak Extra Spicy Noodles."
               index={1}

@@ -22,8 +22,8 @@ const eventData: Event[] = [
     time: "5:30 PM - 7:30 PM",
     location: "TBC",
     description: "Join us for an exciting evening where student entrepreneurs pitch their startup ideas to a panel of industry experts and investors.",
-    imageUrl: "/src/assets/spark_tank.png",
-    isPast: false
+    imageUrl: "/assets/spark_tank.png",
+    isPast: true
   },
   {
     id: 2,
@@ -32,8 +32,8 @@ const eventData: Event[] = [
     time: "5:30 PM - 7:30 PM",
     location: "Virtual Event",
     description: "Hear from successful tech founders about their journey, challenges, and insights into building successful startups.",
-    imageUrl: "https://placehold.co/600x400/1e293b/e2e8f0?text=Fireside+Chat",
-    isPast: false
+    imageUrl: "/assets/test1.jpg",
+    isPast: true
   },
   {
     id: 3,
@@ -42,8 +42,8 @@ const eventData: Event[] = [
     time: "7:00 PM - 10:00 PM",
     location: "Startup Victoria HQ, Melbourne CBD",
     description: "Network with fellow entrepreneurs, investors, and industry professionals in a relaxed setting. Great opportunity to make valuable connections.",
-    imageUrl: "https://placehold.co/600x400/1e293b/e2e8f0?text=Networking+Mixer",
-    isPast: false
+    imageUrl: "/assets/test2.JPEG",
+    isPast: true
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const eventData: Event[] = [
     time: "10:00 AM - 3:00 PM",
     location: "Business School, University of Melbourne",
     description: "A full-day workshop covering essential aspects of entrepreneurship, from ideation to market validation and pitching.",
-    imageUrl: "https://placehold.co/600x400/1e293b/e2e8f0?text=Workshop+Series",
+    imageUrl: "/assets/test3.JPG",
     isPast: true
   },
   {
@@ -131,6 +131,26 @@ const EventCard: React.FC<{ event: Event; index: number }> = ({ event, index }) 
   );
 };
 
+const StayTunedMessage: React.FC = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}
+      className="glass-panel p-8 text-center"
+    >
+      <h3 className="text-2xl font-semibold mb-4">STAY TUNED FOR 2025 Semester 2</h3>
+      <p className="text-gray-400">We're preparing exciting events for the upcoming semester. Check back soon for updates!</p>
+    </motion.div>
+  );
+};
+
 const Events: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'past'>('all');
   const [headerRef, headerInView] = useInView({
@@ -192,9 +212,15 @@ const Events: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredEvents.map((event, index) => (
-              <EventCard key={event.id} event={event} index={index} />
-            ))}
+            {filter === 'upcoming' ? (
+              <div className="col-span-full">
+                <StayTunedMessage />
+              </div>
+            ) : (
+              filteredEvents.map((event, index) => (
+                <EventCard key={event.id} event={event} index={index} />
+              ))
+            )}
           </div>
         </div>
       </section>
