@@ -172,7 +172,7 @@ const Home: React.FC = () => {
             />
             <ImageSection
               image="/assets/test2.JPEG"
-              title="Spicy Startup Trivia"
+              title="Spicy DADADA Trivia"
               description="Testing our members knowledge of startup with a twist, Buldak Extra Spicy Noodles."
               index={1}
             />
