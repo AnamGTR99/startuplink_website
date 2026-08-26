@@ -1,10 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import { instagramApiPlugin } from './instagram-api.plugin';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [react(), instagramApiPlugin(env.INSTAGRAM_ACCESS_TOKEN)],
+    optimizeDeps: {
+      exclude: ['lucide-react'],
+    },
+  };
 });
