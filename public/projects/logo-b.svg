@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Placeholder company logo">
+  <rect width="320" height="320" rx="40" fill="#0f172a"/>
+  <rect x="8" y="8" width="304" height="304" rx="34" fill="none" stroke="#60a5fa" stroke-width="4"/>
+  <rect x="108" y="84" width="104" height="104" rx="16" fill="none" stroke="#22d3ee" stroke-width="10"/>
+  <path d="M96 214h128" stroke="#60a5fa" stroke-width="10" stroke-linecap="round"/>
+  <text x="160" y="258" text-anchor="middle" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="3">LOGO</text>
+</svg>

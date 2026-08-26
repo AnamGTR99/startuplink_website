@@ -5,6 +5,9 @@ import { AnimatePresence } from 'motion/react';
 // Pages
 import Home from './pages/Home';
 import Events from './pages/Events';
+import Projects from './pages/Projects';
+import Sponsors from './pages/Sponsors';
+import Committee from './pages/Committee';
 import Instagram from './pages/Instagram';
 import Contact from './pages/Contact';
 
@@ -21,6 +24,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/sponsors" element={<Sponsors />} />
+            <Route path="/committee" element={<Committee />} />
             <Route path="/instagram" element={<Instagram />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

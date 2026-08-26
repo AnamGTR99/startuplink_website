@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Committee photo placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#155e75"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1504" height="804" rx="24" fill="rgba(255,255,255,0.04)" stroke="rgba(103,232,249,0.45)" stroke-width="3"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" transform="translate(800 380)">
+    <circle cx="-110" cy="-10" r="46"/>
+    <circle cx="0" cy="-28" r="54"/>
+    <circle cx="110" cy="-10" r="46"/>
+    <path d="M-200 110c10-58 48-86 90-86s80 28 90 86"/>
+    <path d="M-90 92c10-64 50-96 90-96s80 32 90 96"/>
+    <path d="M20 110c10-58 48-86 90-86s80 28 90 86"/>
+  </g>
+  <text x="800" y="640" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Committee photo</text>
+  <text x="800" y="700" text-anchor="middle" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28">Placeholder — group photo coming soon</text>
+</svg>

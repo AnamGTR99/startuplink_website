@@ -45,6 +45,9 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Events', path: '/events' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Sponsors', path: '/sponsors' },
+    { name: 'Committee', path: '/committee' },
     { name: 'Instagram', path: '/instagram' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -77,12 +80,12 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 lg:space-x-8">
+        <div className="hidden md:flex space-x-2 lg:space-x-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`relative px-2 py-1 font-medium text-lg transition-colors ${
+              className={`relative px-1 lg:px-2 py-1 font-medium text-sm lg:text-base transition-colors ${
                 location.pathname === link.path ? 'text-white' : 'text-gray-400 hover:text-white'
               }`}
             >
